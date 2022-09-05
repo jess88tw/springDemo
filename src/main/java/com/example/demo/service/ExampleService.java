@@ -18,8 +18,8 @@ public class ExampleService {
         exampleDao.addStaff(exampleEntity);
     }
 
-    public Map searchStaff(ExampleEntity exampleEntity){
-        Map userMap = (Map) exampleDao.searchStaff(exampleEntity).get(0);
+    public Map<?,?> searchStaff(ExampleEntity exampleEntity){
+        Map<?,?> userMap = (Map<?,?>) exampleDao.searchStaff(exampleEntity).get(0);
         return userMap;
     }
 

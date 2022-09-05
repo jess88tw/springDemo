@@ -19,8 +19,8 @@ public class ExampleDao {
                 + "VALUES (?,?);", exampleEntity.getId(), exampleEntity.getName());
     }
 
-    public List searchStaff (ExampleEntity exampleEntity) {
-        List rows = jdbcTemplate.queryForList("SELECT id, name FROM members "
+    public List<?> searchStaff (ExampleEntity exampleEntity) {
+        List<?> rows = jdbcTemplate.queryForList("SELECT id, name FROM members "
                 + "WHERE id = (?);", exampleEntity.getId());
         return rows;
     }
