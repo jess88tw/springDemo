@@ -1,0 +1,1 @@
+document.getElementById("backToHomeButton").onclick = () => location.href = "/example/home";
