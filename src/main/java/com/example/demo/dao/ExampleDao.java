@@ -1,6 +1,8 @@
 package com.example.demo.dao;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -15,23 +17,29 @@ public class ExampleDao {
     private JdbcTemplate jdbcTemplate;
 
     public void addStaff (ExampleEntity exampleEntity) {
-        jdbcTemplate.update("INSERT INTO members(id, name) "
-                + "VALUES (?,?);", exampleEntity.getId(), exampleEntity.getName());
+        String sql = "INSERT INTO members(id, name) VALUES (?,?);";
+        jdbcTemplate.update(sql, exampleEntity.getId(), exampleEntity.getName());
     }
 
-    public List<?> searchStaff (ExampleEntity exampleEntity) {
-        List<?> rows = jdbcTemplate.queryForList("SELECT id, name FROM members "
-                + "WHERE id = (?);", exampleEntity.getId());
+    public List<Map<String, Object>> searchStaff (ExampleEntity exampleEntity) {
+        String sql = "SELECT id, name FROM members WHERE id = (?);";
+        List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql, exampleEntity.getId());
+        if (rows.isEmpty()) {
+            Map<String, Object> emptyMap = new HashMap<>();
+            emptyMap.put("id", "empty");
+            emptyMap.put("name", "empty");
+            rows.add(emptyMap);
+        }
         return rows;
     }
 
     public void updateStaff (ExampleEntity exampleEntity) {
-        jdbcTemplate.update("UPDATE `members` SET `name` = (?) "
-                + "WHERE `id` = (?);", exampleEntity.getName(), exampleEntity.getId());
+        String sql = "UPDATE members SET name = (?) WHERE id = (?);";
+        jdbcTemplate.update(sql, exampleEntity.getName(), exampleEntity.getId());
     }
 
     public void deleteStaff (ExampleEntity exampleEntity) {
-        jdbcTemplate.update("DELETE FROM members "
-                + "WHERE id = (?);", exampleEntity.getId());
+        String sql = "DELETE FROM members WHERE id = (?);";
+        jdbcTemplate.update(sql, exampleEntity.getId());
     }
 }

@@ -31,15 +31,15 @@
 			</div>
 			<form id='homeForm' class="form" method="POST">
 				<div class="form-control">
-					<label for="id">ID</label>
-					<input type="text" placeholder="number only" id="id" name="id" />
+					<label for="id" id="idLabel">ID</label>
+					<input type="hidden" placeholder="number only" id="id" name="id" />
 					<i class="fas fa-check-circle"></i>
 					<i class="fas fa-exclamation-circle"></i>
 					<small>Error message</small>
 				</div>
 				<div class="form-control">
-					<label for="name">Name</label>
-					<input type="text" placeholder="not null" id="name" name="name" />
+					<label for="name" id="nameLabel">Name</label>
+					<input type="hidden" placeholder="not null" id="name" name="name" />
 					<i class="fas fa-check-circle"></i>
 					<i class="fas fa-exclamation-circle"></i>
 					<small>Error message</small>

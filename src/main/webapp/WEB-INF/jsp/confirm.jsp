@@ -27,14 +27,9 @@
 				<button type="submit" value="submit">Submit</button>
 			</form>
 			<button id="backToHomeButton" type="submit" value="disSubmit">Back to home</button>
+			<input type="hidden" id="path" name="path" value="${path}">
 			<script type="text/javascript" src="/js/BackToHome.js"></script>
-			<script>
-				if ("${path}" == "/result/update") {
-					document.getElementById("id").type = "text";
-					document.getElementById("id").readOnly = true;
-					document.getElementById("name").type = "text";
-				}
-			</script>
+			<script type="text/javascript" src="/js/SetUpdateValues.js"></script>
 		</div>
 	</body>
 

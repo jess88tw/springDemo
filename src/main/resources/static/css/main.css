@@ -50,7 +50,7 @@ body {
 }
 
 .form-control label {
-	display: inline-block;
+	display: none;
 	margin-bottom: 5px;
 }
 

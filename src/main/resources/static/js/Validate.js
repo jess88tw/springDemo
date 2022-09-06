@@ -1,6 +1,7 @@
 const form = document.getElementById("homeForm");
 const id = document.getElementById("id");
 const name = document.getElementById("name");
+const needName = document.getElementById("name").readOnly;
 
 document.getElementById("homeForm").addEventListener("submit", e => {
     checkInputs(e);
@@ -21,6 +22,14 @@ function checkInputs (e) {
     }
     else {
         setSuccessFor(id);
+    };
+
+    if (name.value == "" && needName == false) {
+        e.preventDefault();
+        setErrorFor(name, "Name 不得為空白");
+    }
+    else {
+        setSuccessFor(name);
     };
 };
 
