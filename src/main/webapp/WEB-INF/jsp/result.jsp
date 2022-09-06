@@ -13,13 +13,18 @@
             <div class="header">
                 <h2>For Run in JSP: ${message}</h2>
             </div>
-            <div id="confirmBody" class="confirm">
+            <div id="rightBody" class="textBody">
                 <p>${msg}: </p>
                 <p>===> ID: {${id}}, NAME: {${name}}</p>
             </div>
+            <div id="wrongBody" class="textBody" style="display: none">
+                <p>${msg}</p>
+            </div>
             <button id="backToHomeButton" type="submit" value="">完成</button>
         </div>
+        <input type="hidden" id="empty" name="empty" value="${id}">
         <script type="text/javascript" src="/js/BackToHome.js"></script>
+        <script type="text/javascript" src="/js/SetResultValues.js"></script>
     </body>
 
     </html>

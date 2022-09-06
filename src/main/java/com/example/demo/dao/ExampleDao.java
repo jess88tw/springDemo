@@ -21,7 +21,7 @@ public class ExampleDao {
         jdbcTemplate.update(sql, exampleEntity.getId(), exampleEntity.getName());
     }
 
-    public List<Map<String, Object>> searchStaff (ExampleEntity exampleEntity) {
+    public List<Map<String, Object>> searchStaffId(ExampleEntity exampleEntity) {
         String sql = "SELECT id, name FROM members WHERE id = (?);";
         List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql, exampleEntity.getId());
         if (rows.isEmpty()) {
@@ -42,4 +42,16 @@ public class ExampleDao {
         String sql = "DELETE FROM members WHERE id = (?);";
         jdbcTemplate.update(sql, exampleEntity.getId());
     }
+
+//    public List<Map<String, Object>> searchStaffNames (ExampleEntity exampleEntity) {
+//        String sql = "SELECT id, name FROM members WHERE name = (?);";
+//        List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql, exampleEntity.getName());
+//        if (rows.isEmpty()) {
+//            Map<String, Object> emptyMap = new HashMap<>();
+//            emptyMap.put("id", "empty");
+//            emptyMap.put("name", "empty");
+//            rows.add(emptyMap);
+//        }
+//        return rows;
+//    }
 }

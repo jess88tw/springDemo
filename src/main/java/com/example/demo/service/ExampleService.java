@@ -18,8 +18,8 @@ public class ExampleService {
         exampleDao.addStaff(exampleEntity);
     }
 
-    public Map<?,?> searchStaff(ExampleEntity exampleEntity){
-        Map<?,?> userMap = (Map<?,?>) exampleDao.searchStaff(exampleEntity).get(0);
+    public Map<?,?> searchStaffId(ExampleEntity exampleEntity){
+        Map<?,?> userMap = (Map<?,?>) exampleDao.searchStaffId(exampleEntity).get(0);
         return userMap;
     }
 
@@ -30,4 +30,10 @@ public class ExampleService {
     public void deleteStaff(ExampleEntity exampleEntity){
         exampleDao.deleteStaff(exampleEntity);
     }
+
+//    public Map<?,?> searchStaffNames(ExampleEntity exampleEntity){
+//        Map<?,?> userMap = (Map<?,?>) exampleDao.searchStaffNames(exampleEntity);
+//        System.out.println(userMap);
+//        return userMap;
+//    }
 }

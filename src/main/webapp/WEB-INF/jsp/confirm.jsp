@@ -13,7 +13,7 @@
 			<div class="header">
 				<h2>For Run in JSP: ${message}</h2>
 			</div>
-			<div id="confirmBody" class="confirm">
+			<div id="confirmBody" class="textBody">
 				<p>${msg}: </p>
 				<p>===> ID: {${id}}, NAME: {${name}} ?</p>
 			</div>

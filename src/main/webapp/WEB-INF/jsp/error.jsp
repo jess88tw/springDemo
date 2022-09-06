@@ -6,8 +6,10 @@
         <meta charset="UTF-8">
         <title>呵呵呵出錯拉</title>
     </head>
+
     <body>
         <h2>${msg}</h2>
         <img src="/picture/error.jpg" />
     </body>
+
     </html>

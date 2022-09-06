@@ -33,15 +33,11 @@
 				<div class="form-control">
 					<label for="id" id="idLabel">ID</label>
 					<input type="hidden" placeholder="number only" id="id" name="id" />
-					<i class="fas fa-check-circle"></i>
-					<i class="fas fa-exclamation-circle"></i>
 					<small>Error message</small>
 				</div>
 				<div class="form-control">
 					<label for="name" id="nameLabel">Name</label>
 					<input type="hidden" placeholder="not null" id="name" name="name" />
-					<i class="fas fa-check-circle"></i>
-					<i class="fas fa-exclamation-circle"></i>
 					<small>Error message</small>
 				</div>
 				<button type="submit" value="submit">Submit</button>
