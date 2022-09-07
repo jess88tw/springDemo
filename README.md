@@ -8,7 +8,7 @@
 ### 使用 Spring Initializr 建立 Maven Project
 先到 https://start.spring.io/ 建立 Maven 專案
 
-![image](picture or gif url)
+![image](https://github.com/jess88tw/spring_demo/blob/master/src/main/resources/static/picture/spring%20initiailiz.png)
 
 * 本次會使用 JAVA 11.
 * 使用 MySQL 作為 DB
