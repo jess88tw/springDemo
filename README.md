@@ -14,7 +14,7 @@
 * 使用 MySQL 作為 DB
 * 為了日後其他功能, 使用 JSP
 
-![image](picture or gif url)
+![image](https://github.com/jess88tw/spring_demo/blob/master/src/main/resources/static/picture/controller%20design.jpeg)
 ### 在 MySQL 建立 Database 與 Table
 ```
 CREATE DATABASE spring_homework;
@@ -194,7 +194,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 ### 執行 DemoApplication
 最後執行 DemoApplication 就成功了!!!
 
-![image](picture or gif url)
+![image](https://github.com/jess88tw/spring_demo/blob/master/src/main/resources/static/picture/view.png)
 
 
 
