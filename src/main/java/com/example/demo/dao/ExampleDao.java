@@ -21,7 +21,7 @@ public class ExampleDao {
         jdbcTemplate.update(sql, exampleEntity.getId(), exampleEntity.getName());
     }
 
-    public List<Map<String, Object>> searchStaffId(ExampleEntity exampleEntity) {
+    public List<Map<String, Object>> searchStaffId (ExampleEntity exampleEntity) {
         String sql = "SELECT id, name FROM members WHERE id = (?);";
         List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql, exampleEntity.getId());
         if (rows.isEmpty()) {

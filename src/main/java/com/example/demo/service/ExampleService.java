@@ -14,20 +14,20 @@ public class ExampleService {
     @Autowired
     ExampleDao exampleDao;
 
-    public void addStaff(ExampleEntity exampleEntity){
+    public void addStaff (ExampleEntity exampleEntity) {
         exampleDao.addStaff(exampleEntity);
     }
 
-    public Map<?,?> searchStaffId(ExampleEntity exampleEntity){
+    public Map<?,?> searchStaffId (ExampleEntity exampleEntity) {
         Map<?,?> userMap = (Map<?,?>) exampleDao.searchStaffId(exampleEntity).get(0);
         return userMap;
     }
 
-    public void updateStaff(ExampleEntity exampleEntity){
+    public void updateStaff (ExampleEntity exampleEntity) {
         exampleDao.updateStaff(exampleEntity);
     }
 
-    public void deleteStaff(ExampleEntity exampleEntity){
+    public void deleteStaff (ExampleEntity exampleEntity) {
         exampleDao.deleteStaff(exampleEntity);
     }
 

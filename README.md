@@ -173,17 +173,12 @@ return "result" 會將頁面導向 result.jsp
 * @ComponentScan
 * @EntityScan
 
-目的是讓系統去檢查各個package的檔案
+目的是讓系統去檢查各個 package 的檔案
 ```
 @SpringBootApplication
 @ComponentScan({"com.example.demo","com.example.demo.controller","com.example.demo.dao","com.example.demo.entity","com.example.demo.service"})
 @EntityScan({"com.example.demo","com.example.demo.controller","com.example.demo.dao","com.example.demo.entity","com.example.demo.service"})
-public class DemoApplication extends SpringBootServletInitializer {
-
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(DemoApplication.class);
-    }
+public class DemoApplication extends SpringBootServletInitializer {    
     
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
